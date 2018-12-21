@@ -1,0 +1,53 @@
+<div  class="cby">
+  <storeBasic></storeBasic>
+  <div class="tb">
+    <nz-table
+      #ajaxTable
+      nzShowSizeChanger
+      [nzFrontPagination]="false"
+      [nzData]="dataSet"
+      [nzLoading]="loading"
+      [nzTotal]="total"
+      [(nzPageIndex)]="pageIndex"
+      [(nzPageSize)]="pageSize"
+      (nzPageIndexChange)="searchData()"
+      (nzPageSizeChange)="searchData(true)">
+      <thead (nzSortChange)="sort($event)" nzSingleSort>
+        <tr>
+            <th nzShowCheckbox nzShowRowSelection [nzSelections]="listOfSelection" [(nzChecked)]="allChecked" [nzIndeterminate]="indeterminate" (nzCheckedChange)="checkAll($event)"></th>
+          <th style="width:100px" nzLeft="0px">
+              <img src="../../../assets/icon/user.svg">用户名</th>
+          <th style="width:120px" nzLeft="100px">
+              <img src="../../../assets/icon/Relationship.svg">用户类型</th>
+          <th><img src="../../../assets/icon/email.svg">邮箱</th>
+          <th><img src="../../../assets/icon/Customer.svg">客户</th>
+          <th><img src="../../../assets/icon/friends.svg">伙伴</th>
+          <th>Column 4</th>
+          <th>Column 5</th>
+          <th>Column 6</th>
+          <th>Column 7</th>
+          <th>Column 8</th>
+          <th nzWidth="100px" nzRight="0px">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of ajaxTable.data">
+            <td nzShowCheckbox [(nzChecked)]="data.checked" (nzCheckedChange)="refreshStatus()"></td>
+            <td>{{data.name.first}} {{data.name.last}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.email}}</td>
+            <td>
+              <a>action</a>
+            </td>            
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>    

@@ -1,0 +1,23 @@
+{
+    "search":"搜索",
+    "home":"主頁",
+    "view":"可視化管理",
+    "report":"報表管理",
+    "site":"站點管理",
+    "equipment":"設備管理",
+    "cards":"卡片管理",
+    "business":"業務管理",
+    "work-order":"工單管理",
+    "inventory":"庫存管理",
+    "AP":"AP管理",
+    "Call-repair":"叫修管理",
+    "maintenance":"維修管理",
+    "change":"切换",
+
+    "basic-date":"基本資料",
+    "system-management":"系統管理",
+    "alarm-management":"告警管理",
+    "data-abouchement":"數據匯入",
+    "parameter-setting":"參數設定",
+    "publish-management":"公佈欄管理"
+}

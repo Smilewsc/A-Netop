@@ -1,0 +1,272 @@
+<div class="animated fadeIn" style="margin-top: 1em">
+    <nz-breadcrumb style="margin:16px 0;">
+      <nz-breadcrumb-item>管理</nz-breadcrumb-item>
+      <nz-breadcrumb-item>{{currentRouter}}</nz-breadcrumb-item>
+    </nz-breadcrumb>
+    <nz-card style="width:1420px;margin-top:50px;margin-left:90px;">
+        <div class="msg-header">
+          <h2>| 基本信息</h2>
+        </div> 
+        <nz-collapse>
+            <nz-collapse-panel class="childmsg"  [nzHeader]="'设备详情'" [nzActive]="true" [nzDisabled]="true">
+              <div class="zbb">
+                <div class="msg-content">
+                    <nz-form-label nzRequired>
+                      <span>设备编号</span>
+                    </nz-form-label>
+                    <input placeholder="设备编号"/>
+                </div>
+                <div class="msg-content">
+                  <nz-form-label nzRequired>
+                    <span>设备名称</span>
+                  </nz-form-label>
+                  <input placeholder="设备名称"/>
+                </div>              
+                <div class="msg-content">
+                    <nz-form-label nzRequired>
+                      <span>设备型号</span>
+                    </nz-form-label>
+                    <input placeholder="设备型号"/>
+                </div>
+                <div class="msg-content">
+                    <nz-form-label nzRequired>
+                      <span>设备类型</span>
+                    </nz-form-label>
+                    <input placeholder="设备类型"/>
+                </div>
+                <div class="msg-content">
+                      <nz-form-label nzRequired>
+                        <span>设备规格</span>
+                      </nz-form-label>
+                      <input placeholder="设备规格"/>
+                </div>
+                <div class="msg-content">
+                  <nz-form-label nzRequired>
+                    <span>设备状态</span>
+                  </nz-form-label>
+                  <nz-select style="width:180px;height:30px;"  nzShowSearch nzAllowClear
+                                    [(ngModel)]="deviceState" (ngModelChange)="device()">
+                           <nz-option *ngFor="let dist of device" [nzLabel]="dist.lable"
+                                      [nzValue]="dist.value"></nz-option>
+                </nz-select>
+              </div>
+              <div class="form-content" style="height:40px;margin-top: 10px; margin-left: 16px;">
+                <div class="lf-content">
+                  <nz-form-label>
+                    <span>设备描述</span>
+                  </nz-form-label>  
+                     <div name="sb" contenteditable="true" class="sb-content" style="margin-top: -35px; width:760px;"></div>
+                </div>
+              </div>  
+              <div class="sb-img rt">
+                  <div class="clearfix">
+                      <nz-upload
+                        nzAction="https://jsonplaceholder.typicode.com/posts/"
+                        nzListType="picture-card"
+                        [nzBeforeUpload]="beforeUpload"
+                        [(nzFileList)]="fileList"
+                        [nzShowButton]="fileList.length < 1"
+                        [nzPreview]="handlePreview">
+                          <i nz-icon type="plus"></i>
+                          <div class="ant-upload-text">Upload</div>
+                      </nz-upload>
+                      <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+                        <ng-template #modalContent>
+                          <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+                        </ng-template>
+                      </nz-modal>
+                    </div>
+              </div> 
+            </div>             
+            </nz-collapse-panel>
+            <nz-collapse-panel class="childmsg" [nzHeader]="'公司信息'" [nzActive]="true">
+              <div class="msg-content">
+                  <nz-form-label >
+                    <span>公司名称</span>
+                  </nz-form-label>
+                  <input placeholder="公司名称"/>
+                </div>
+                <div class="msg-content">
+                    <nz-form-label>
+                      <span>公司区域</span>
+                    </nz-form-label>
+                    <nz-select style="width: 180px;height:30px;"  nzShowSearch nzAllowClear
+                                      [(ngModel)]="areaState" (ngModelChange)="area()">
+                             <nz-option *ngFor="let dist of area" [nzLabel]="dist.lable"
+                                        [nzValue]="dist.value"></nz-option>
+                  </nz-select>
+                </div>
+                <div class="msg-content">
+                    <nz-form-label >
+                      <span>绑定店号</span>
+                    </nz-form-label>
+                    <input placeholder="绑定店号"/>
+                  </div>
+                  <div class="msg-content">
+                    <nz-form-label>
+                     <span>绑定店名</span>
+                    </nz-form-label>
+                    <input placeholder="绑定店名"/>
+                  </div>
+                  <div class="msg-content">
+                    <nz-form-label>
+                     <span style="letter-spacing: 5px;">联系人</span>
+                    </nz-form-label>
+                    <input placeholder="联系人"/>
+                  </div>
+                  <div class="msg-content">
+                      <nz-form-label>
+                        <span>联系方式</span>
+                      </nz-form-label>
+                      <input placeholder="联系方式" type="tel"/>
+                  </div>
+                  <div class="form-content" style="height:40px;margin-top: 10px;">
+                    <div class="lf-content" >
+                      <nz-form-label>
+                        <span style="margin-left: 5px;">公司地址</span>
+                      </nz-form-label>
+                         <div name="sb" contenteditable="true" class="sb-content" style="margin-top: -35px;"></div>
+                    </div>     
+               </div>
+          </nz-collapse-panel>
+            <nz-collapse-panel class="childmsg" [nzHeader]="'卡片信息'" [nzActive]="true">
+              <div class="msg-content">
+                  <nz-form-label>
+                    <span>主卡ICCID</span>
+                  </nz-form-label>
+                  <input placeholder="主卡ICCID"/>
+              </div>
+                <div class="msg-content">
+                    <nz-form-label>
+                      <span>副卡ICCID</span>
+                    </nz-form-label>
+                    <input placeholder="副卡ICCID"/>
+                </div>
+          </nz-collapse-panel>          
+            <nz-collapse-panel class="childmsg" [nzHeader]="'使用期限'" [nzActive]="true">
+                <div class="msg-content">
+                    <nz-form-label>
+                      <span>购置时间</span>
+                    </nz-form-label>
+                    <input placeholder="购置时间" type="date"/>
+                </div>
+                <div class="msg-content">
+                    <nz-form-label>
+                      <span>出货时间</span>
+                    </nz-form-label>  
+                    <input placeholder="出货时间" type="date"/>
+                </div>
+                <div class="msg-content">
+                    <nz-form-label>
+                      <span>使用日期</span>
+                    </nz-form-label>
+                    <input placeholder="使用日期" type="date"/>
+                </div>
+                <div class="msg-content">
+                    <nz-form-label >
+                      <span>回购日期</span>
+                    </nz-form-label>
+                    <input placeholder="回购日期" type="date"/>
+                </div>              
+                <div class="msg-content">
+                      <nz-form-label >
+                        <span>保固年限</span>
+                      </nz-form-label>
+                      <input type="number" placeholder="保固年限" min="1"/>
+                </div>
+            </nz-collapse-panel>
+            
+  
+            <nz-collapse-panel class="childmsg" [nzHeader]="'设备状态'" [nzActive]="true">
+                <div class="msg-content" id="sb-manager">
+                  <nz-form-label>
+                      <span class="wx">维修状态</span>
+                    </nz-form-label>
+                    <nz-select style="width: 180px;height:30px;" nzPlaceHolder="维修状态" nzShowSearch nzAllowClear
+                                        [(ngModel)]="serviceState" (ngModelChange)="service()">
+                               <nz-option *ngFor="let dist of service" [nzLabel]="dist.lable"
+                                          [nzValue]="dist.value"></nz-option>
+                    </nz-select>
+                  </div>
+                  <div class="msg-content">
+                      <nz-form-label >
+                       <span>维修单号</span>
+                      </nz-form-label>
+                     <input type="text" name="wxdh" placeholder="维修单号"/>
+                 </div>
+                 <div class="msg-content">
+                  <nz-form-label >
+                    <span>维修商</span>
+                  </nz-form-label>
+                  <input placeholder="维修商"/>
+                </div>
+                <div class="msg-content">
+                  <nz-form-label >
+                    <span>维修时限</span>
+                  </nz-form-label>
+                  <input placeholder="维修时限" type="date"/>
+                </div>
+                <div class="msg-content">
+                  <nz-form-label >
+                    <span>维修金额</span>
+                  </nz-form-label>
+                  <input placeholder="维修金额" type="number" min="10"/>
+                </div>
+                <div class="msg-content">
+                  <nz-form-label >
+                    <span>保修年限</span>
+                  </nz-form-label>
+                  <input placeholder="保修年限" type="number" min="1"/>
+                </div>
+                 <div class="form-content">
+                         
+                         <div class="lf-content">
+                           <nz-form-label>
+                             <span style="margin-left: 5px;">维修描述</span>
+                           </nz-form-label>  
+                             <div name="wx" contenteditable="true" class="sb-content" style="margin-top: -35px;"></div>
+                           
+                         </div>       
+                    </div>
+            </nz-collapse-panel>          
+          </nz-collapse>
+          <div class="msg-header">
+              <h2>| 维修信息</h2>
+          </div>
+          <nz-collapse>
+              <nz-collapse-panel class="childmsg" [nzHeader]="'维修详情'" [nzActive]="true" >
+                  <nz-table #nzTable [nzData]="displayData">
+                      <thead>
+                        <tr>
+                          <th nzCustomFilter>
+                              设备编号
+                            <nz-dropdown nzTrigger="click" [nzClickHide]="false" #dropdown>
+                              <i nz-icon type="smile-o" class="ant-table-filter-icon" [class.ant-table-filter-open]="dropdown.nzVisible" nz-dropdown></i>
+                              <div class="custom-filter-dropdown">
+                                <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue">
+                                <button nz-button [nzType]="'primary'" (click)="search()">Search</button>
+                              </div>
+                            </nz-dropdown>
+                          </th>
+                          <th>设备名称</th>
+                          <th>故障原因</th>
+                          <th>维修状态</th>
+                          <th>维修单号</th>
+                          <th nzShowFilter [nzFilters]="filterAddressArray" (nzFilterChange)="filterAddressChange($event)">处理结果</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          
+                        </tr>
+                      </tbody>
+                    </nz-table>
+              </nz-collapse-panel>
+          </nz-collapse>
+          <div class="btn">
+            <button>提交</button>
+            <button>取消</button>
+          </div>
+    </nz-card>
+  </div>  
+  

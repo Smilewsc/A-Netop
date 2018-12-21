@@ -1,0 +1,213 @@
+<div class="body-content">
+    <div class="nav">
+        <div class="nav-bar clearfix">
+            <div class="lf">
+                <span class="netop">NeTOP</span>
+                <span class="pt">运维系统平台</span>
+            </div>
+            <div class="rt">
+                <span>
+                    <img src="../../../assets/icon/guanliyuan.svg" />
+                </span>
+                <span class="super">超级管理员</span>
+                <span class="xiala" style="position:absolute">
+                    <img src="../../../assets/icon/xiala.svg" (click)="show('set')">
+                    <div id="set"  style="display:none">
+                      <div id="theme">
+                        <img src="../../../assets/icon/tiaose.svg">
+                        <span class="color">
+                          <div class="theme-color-value" style="background: #00a388" (click)="setColor('1')"></div>
+                          <div class="theme-color-value" style="background: #25323c" (click)="setColor('2')"></div>
+                          <div class="theme-color-value" style="background: #0f6d98" (click)="setColor('3')"></div>
+                          <div class="theme-color-value" style="background: #647178" (click)="setColor('4')"></div>
+                          <div class="theme-color-value" style="background: #a54545" (click)="setColor('5')"></div>
+                          <div class="theme-color-value" style="background: #a72162" (click)="setColor('6')"></div>
+                        </span>
+                      </div>
+                      <div id="langular" class="clearfix" >
+                        <img class="yy" src="../../../assets/icon/zhongyingwenqiehuan.svg" >
+                        <span>语言</span>
+                        <img class="xl" src="../../../assets//icon/xialal.svg" (click)="show('zyf')">
+                        <div class="lg lf" id="zyf" style="display:none">
+                          <button (click)="switchLanguage('en')" value="en"  nz-button nzType="primary">English</button>
+                          <button (click)="switchLanguage('zh_cn')" value="zh_cn"  nz-button nzType="primary">中文</button>
+                          <button (click)="switchLanguage('zh_tw')" value="zh_tw"  nz-button nzType="primary">繁體字</button>
+                          <!-- <label>
+                            {{ 'hello' | translate }}
+                            <select #langSelect (change)="changeLang(langSelect.value)">
+                              <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                            </select>
+                          </label> -->
+                        </div>
+                      </div>
+                    </div>
+                </span>
+                <span class="exit">
+                    <img src="../../../assets/icon/tuichu.svg">
+                </span>
+            </div>
+        </div>
+        <div class="snav-bar" >
+            <ul nz-menu [nzMode]="'vertical'" style="width: 80px; background: #4FB99F">
+                <li nz-submenu style="height:65px">
+                  <div title class="title"><img src="../../../assets/icon/sousuo.svg">
+                    <span> {{ "search" | translate }}</span>
+                  </div>
+                  <ul>
+                    <li nz-menu-group>
+                      <span title>Item 1</span>
+                      <ul>
+                        <li nz-menu-item>Option 1</li>
+                        <li nz-menu-item>Option 2</li>
+                      </ul>
+                    </li>
+                    <li nz-menu-group>
+                      <span title>Item 2</span>
+                      <ul>
+                        <li nz-menu-item>Option 3</li>
+                        <li nz-menu-item>Option 4</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li nz-submenu (nzOpenChange)="change($event)"  [routerLink]="['/basic/home']" >
+                  <div title class="title"><img src="../../../assets/icon/home.svg">
+                      <span> {{ "home" | translate }}</span>
+                  </div>
+                <ul>
+                  <li nz-menu-item>Option 5</li>
+                  <li nz-menu-item>Option 6</li>
+                  <li nz-submenu>
+                    <span title>Submenu</span>
+                    <ul>
+                      <li nz-menu-item>Option 7</li>
+                      <li nz-menu-item>Option 8</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>                             
+                <li nz-submenu (nzOpenChange)="change($event)"  [routerLink]="['/basic/view']">
+                    <div title class="title"><img src="../../../assets/icon/view.svg">
+                        <span > {{ "view" | translate }}</span>
+                    </div>
+                  <ul>
+                    <li nz-menu-item>Option 5</li>
+                    <li nz-menu-item>Option 6</li>
+                    <li nz-submenu>
+                      <span title>Submenu</span>
+                      <ul>
+                        <li nz-menu-item>Option 7</li>
+                        <li nz-menu-item>Option 8</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li nz-submenu [routerLink]="['/basic/report']">
+                    <div title class="title" ><img src="../../../assets/icon/baobiaoguanli.svg">
+                        <span> {{ "report" | translate }}</span>
+                    </div>
+                  <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                  </ul>
+                </li>
+                <li nz-submenu  [routerLink]="['/basic/site']">
+                        <div title class="title"><img src="../../../assets/icon/zhandianguanli.svg">
+                            <span> {{ "site" | translate }}</span>
+                        </div>
+                      <ul>
+                        <li nz-menu-item>Option 9</li>
+                        <li nz-menu-item>Option 10</li>
+                        <li nz-menu-item>Option 11</li>
+                      </ul>
+                    </li> 
+                    <li nz-submenu  [routerLink]="['/basic/equipment']">
+                            <div title class="title"><img src="../../../assets/icon/shebeiguanli.svg">
+                                <span> {{ "equipment" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li [routerLink]="['/basic/equipment-manager']" nz-menu-item>设备详情</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li> 
+                    <li nz-submenu  [routerLink]="['/basic/cards']">
+                            <div title class="title"><img src="../../../assets/icon/simka.svg">
+                                <span> {{ "cards" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li nz-menu-item>Option 9</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li>
+                    <li nz-submenu  [routerLink]="['/basic/business']">
+                            <div title class="title"><img src="../../../assets/icon/yewuguanli.svg">
+                                <span > {{ "business" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li nz-menu-item>Option 9</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li>
+                    <li nz-submenu  [routerLink]="['/basic/order']">
+                            <div title class="title"><img src="../../../assets/icon/gongdanguanli.svg">
+                                <span > {{ "work-order" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li nz-menu-item>Option 9</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li> 
+                    <li nz-submenu [routerLink]="['/basic/inventory']">
+                            <div title class="title"><img src="../../../assets/icon/kucunguanli.svg">
+                                <span > {{ "inventory" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li nz-menu-item>Option 9</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li> 
+                    <li nz-submenu  [routerLink]="['/basic/ap']">
+                            <div title class="title"><img src="../../../assets/icon/APguanli.svg">
+                                <span> {{ "AP" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li nz-menu-item>Option 9</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li>
+                    <li nz-submenu [routerLink]="['/basic/repair']">
+                        <div title class="title" ><img src="../../../assets/icon/jiaoxiuguanli.svg">
+                            <span> {{ "Call-repair" | translate }}</span>
+                        </div>
+                      <ul>
+                        <li nz-menu-item>Option 9</li>
+                        <li nz-menu-item>Option 10</li>
+                        <li nz-menu-item>Option 11</li>
+                      </ul>
+                </li>
+                <li nz-submenu [routerLink]="['/basic/maintenance']">
+                    <div title class="title" ><img src="../../../../assets/icon/weixiuguanli.svg">
+                        <span > {{ "maintenance" | translate }}</span>
+                    </div>
+                  <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                  </ul>
+            </li>
+            <li nz-submenu [routerLink]="['/backstage']">
+              <div title class="title"><img src="../../../assets/icon/qiehuan.svg">
+                  <span >{{"change" | translate }}</span>
+              </div>                                                                                                              </li>                                                                                         
+              </ul>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>

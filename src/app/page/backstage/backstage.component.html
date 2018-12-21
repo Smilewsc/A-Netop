@@ -1,0 +1,201 @@
+<div class="body-content">
+    <div class="nav">
+        <div class="nav-bar clearfix">
+            <div class="lf">
+                <span class="netop">NeTOP</span>
+                <span class="pt">运维系统平台</span>
+            </div>
+            <div class="rt">
+                <span>
+                    <img src="../../../assets/icon/guanliyuan.svg" />
+                </span>
+                <span class="super">超级管理员</span>
+                <span class="xiala" style="position:absolute">
+                    <img src="../../../assets/icon/xiala.svg" (click)="show('set')">
+                    <div id="set"  style="display:none">
+                      <div id="theme">
+                        <img src="../../../assets/icon/tiaose.svg">
+                        <span class="color">
+                          <div class="theme-color-value" style="background: #00a388"></div>
+                          <div class="theme-color-value" style="background: #25323c"></div>
+                          <div class="color3"></div>
+                          <div class="color4"></div>
+                          <div class="color5"></div>
+                          <div class="color6"></div>
+                        </span>
+                      </div>
+                      <div id="langular" class="clearfix" >
+                        <img class="yy" src="../../../assets/icon/zhongyingwenqiehuan.svg" >
+                        <span>语言</span>
+                        <img class="xl" src="../../../assets//icon/xialal.svg" (click)="show('zyf')">
+                        <div class="lg lf" id="zyf" style="display:none">
+                          <button (click)="switchLanguage('en')" value="en"  nz-button nzType="primary">English</button>
+                          <button (click)="switchLanguage('zh_cn')" value="zh_cn"  nz-button nzType="primary">中文</button>
+                          <button (click)="switchLanguage('zh_tw')" value="zh_tw"  nz-button nzType="primary">繁體字</button>
+                          <!-- <label>
+                            {{ 'hello' | translate }}
+                            <select #langSelect (change)="changeLang(langSelect.value)">
+                              <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                            </select>
+                          </label> -->
+                        </div>
+                      </div>
+                    </div>
+                </span>
+                <span class="exit">
+                    <img src="../../../assets/icon/tuichu.svg">
+                </span>
+            </div>
+        </div>
+        <div class="snav-bar" >
+            <ul nz-menu [nzMode]="'vertical'" style="width: 80px; background: #4FB99F; min-height: 700px;">
+                <li nz-submenu style="height:65px">
+                  <div title class="title"><img src="../../../assets/icon/sousuo.svg">
+                    <span > {{ "search" | translate }}</span>
+                  </div>
+                  <ul>
+                    <li nz-menu-group>
+                      <span title>Item 1</span>
+                      <ul>
+                        <li nz-menu-item>Option 1</li>
+                        <li nz-menu-item>Option 2</li>
+                      </ul>
+                    </li>
+                    <li nz-menu-group>
+                      <span title>Item 2</span>
+                      <ul>
+                        <li nz-menu-item>Option 3</li>
+                        <li nz-menu-item>Option 4</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li   [routerLink]="['/backstage/basicdata']" nz-submenu (nzOpenChange)="change($event)">
+                  <div title class="title" ><img src="../../../assets/icon/jibenziliao.svg">
+                      <span> {{ "basic-date" | translate }}</span>
+                  </div>
+                <ul>
+                  <li nz-menu-item>Option 5</li>
+                  <li nz-menu-item>Option 6</li>
+                  <li nz-submenu>
+                    <span title>Submenu</span>
+                    <ul>
+                      <li nz-menu-item>Option 7</li>
+                      <li nz-menu-item>Option 8</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>                             
+                <li  [routerLink]="['/backstage/system']" nz-submenu (nzOpenChange)="change($event)" >
+                    <div title class="title"  ><img src="../../../assets/icon/xitongguanli.svg">
+                        <span> {{ "system-management" | translate }}</span>
+                    </div>
+                  <ul>
+                    <li nz-menu-item>Option 5</li>
+                    <li nz-menu-item>Option 6</li>
+                    <li nz-submenu>
+                      <span title>Submenu</span>
+                      <ul>
+                        <li nz-menu-item>Option 7</li>
+                        <li nz-menu-item>Option 8</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li nz-submenu  [routerLink]="['/backstage/alarm']">
+                    <div title class="title"><img src="../../../assets/icon/gaojingguanli.svg">
+                        <span> {{ "alarm-management" | translate }}</span>
+                    </div>
+                  <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                  </ul>
+                </li>
+                <li nz-submenu [routerLink]="['/backstage/abouchement']">
+                        <div title class="title"><img src="../../../assets/icon/shujuhuiru.svg">
+                            <span> {{ "data-abouchement" | translate }}</span>
+                        </div>
+                      <ul>
+                        <li nz-menu-item>Option 9</li>
+                        <li nz-menu-item>Option 10</li>
+                        <li nz-menu-item>Option 11</li>
+                      </ul>
+                    </li> 
+                    <li nz-submenu [routerLink]="['/backstage/parameter']">
+                            <div title class="title">
+                              <img src="../../../assets/icon/canshusheding.svg">
+                                <span> {{ "parameter-setting" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li nz-menu-item>Option 9</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li> 
+                    <li nz-submenu   [routerLink]="['/backstage/publish']">
+                            <div title class="title"><img src="../../../assets/icon/gongbulanguanli.svg">
+                                <span> {{ "publish-management" | translate }}</span>
+                            </div>
+                          <ul>
+                            <li nz-menu-item>Option 9</li>
+                            <li nz-menu-item>Option 10</li>
+                            <li nz-menu-item>Option 11</li>
+                          </ul>
+                    </li>
+                    <li nz-submenu   [routerLink]="['/basic']">
+                      <div title class="title"><img src="../../../assets/icon/qiehuan.svg">
+                          <span>{{"change" | translate }}</span>
+                      </div>                                                                                                   </li>                                                                                            
+              </ul>
+        </div>
+        <div class="tabs"> 
+            <!-- <nz-tabset [nzType]="'card'" [nzTabBarExtraContent]="extraTemplate">
+                <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+                  <ng-template #titleTemplate>
+                    <div>
+                      {{ tab }}
+                      <i nz-icon type="close" (click)="closeTab(tab)" class="ant-tabs-close-x"></i>
+                    </div>
+                  </ng-template>
+                </nz-tab>
+              </nz-tabset>
+              <ng-template #extraTemplate>
+                <i class="ant-tabs-new-tab" nz-icon type="plus" (click)="newTab()"></i> 
+              </ng-template> -->
+              <!-- <div style="margin-bottom: 16px;">
+                    <button nz-button (click)="newTab()">ADD</button>
+                  </div> -->
+                  <nz-tabset [nzType]="'card'" [nzSelectedIndex]="index">
+                    <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+                      <ng-template #titleTemplate>
+                        <div>{{ tab }}<i nz-icon type="close" class="ant-tabs-close-x" (click)="closeTab(tab)"></i></div>
+                      </ng-template>
+                      <!-- Content of {{ tab }} -->
+                    </nz-tab>
+                  </nz-tabset>
+        </div>
+        <div class="search clearfix">
+          <div class="cx lf">
+              <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
+                  <input type="text" nz-input placeholder="input search text">
+                </nz-input-group>
+                <ng-template #suffixIconButton>
+                  <button nz-button nzType="primary" nzSearch><i nz-icon type="down"></i></button>  
+                </ng-template>
+                <button class="btn"> 查询 </button>
+          </div>
+          <div class="bj rt">
+              <div class="add-user">
+                  <img src="../../../assets/icon/tianjiayonghu.svg">
+                  <span>添加用户</span>
+              </div>
+              <div class="dc-user">
+                  <img src="../../../assets/icon/daochuyonghu.svg">
+                  <span>导出用户</span>
+              </div>
+          </div>
+        </div>       
+    </div>
+    <router-outlet></router-outlet>
+</div>

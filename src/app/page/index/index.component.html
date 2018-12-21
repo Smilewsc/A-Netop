@@ -1,0 +1,484 @@
+<div class="body-content">
+    <div class="nav">
+        <div class="nav-bar clearfix">
+            <div class="lf">
+                <span class="netop">NeTOP</span>
+                <span class="pt">运维系统平台</span>
+            </div>
+            <div class="rt">
+                <span>
+                    <img src="../../../assets/icon/guanliyuan.svg" />
+                </span>
+                <span class="super">您好！超级管理员~</span>
+                <span class="xiala">
+                    <img src="../../../assets/icon/xiala.svg">
+                </span>
+                <span class="exit">
+                    <img src="../../../assets/icon/tuichu.svg">
+                </span>
+            </div>
+        </div>
+        <div class="advert" style="display:none">
+            <img src="../../../assets/img/advert.jpg">
+        </div>
+        <div class="menu">
+            <a tabindex="1">首页</a>
+            <span>></span>
+            <a tabindex="3">用户管理</a>
+            <a class="close">
+                <img src="../../../assets/icon/guanbi.svg" />
+            </a>
+        </div>
+        <div class="search">
+            <input class="search-box" placeholder="请输入搜索内容">
+            <button class="search-btn">搜索</button>
+            <div class="ts">10</div>
+            <div class="ts1">
+                <img src="../../../assets/icon/sanjiao.svg" />
+            </div>
+            <div class="user-handle clearfix">
+                <div class="add-user">
+                    <img src="../../../assets/icon/tianjiayonghu.svg">
+                    <a>添加用户</a>
+                </div>
+                <div class="dc-user">
+                    <img src="../../../assets/icon/daochuyonghu.svg">
+                    <a>导出用户</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-sbar">
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/sousuo.svg" />
+                </li>
+                <li>
+                    <span>搜索</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/home.svg" />
+                </li>
+                <li>
+                    <span>主页</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/jibenziliao.svg" />
+                </li>
+                <li>
+                    <span>基本资料</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/xitongguanli.svg" />
+                </li>
+                <li>
+                    <span>系统管理</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/yewuguanli.svg" />
+                </li>
+                <li>
+                    <span>业务管理</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/gongdanguanli.svg" />
+                </li>
+                <li>
+                    <span>工单管理</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/kucunguanli.svg" />
+                </li>
+                <li>
+                    <span>库存管理</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/zhandianguanli.svg" />
+                </li>
+                <li>
+                    <span>站点管理</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/sheibei.svg" />
+                </li>
+                <li>
+                    <span>设备管理</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/SIM.svg" />
+                </li>
+                <li>
+                    <span>卡片管理</span>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li class="icon-tb">
+                    <img src="../../../assets/icon/qiehuan.svg" />
+                </li>
+                <li>
+                    <span>切换</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tb-content">
+        <table class="content">
+              <thead id="tt"> 
+                <tr>
+                        <th style="width:70px" (click)="choose()" >
+                        <img  src="../../../assets/icon/choose.svg " id="qx2" style="width:26px ;height:26px;display: none;">
+                            <img  src="../../../assets/icon/kuang.svg " id="qx" style="width:26px ;height:26px">
+                        </th>
+                        <th>
+                            <span class="fk-user">
+                                <img src="../../../assets/icon/user.svg">
+                            </span>
+                            <span class="user-name">用户名</span>
+                        </th>
+                        <th>
+                            <span class="fk-user">
+                                <img src="../../../assets/icon/Relationship.svg">
+                            </span>
+                            <span class="user-name">用户类型</span>
+                        </th>
+                        <th>
+                            <span class="fk-user">
+                                <img src="../../../assets/icon/email.svg">
+                            </span>
+                            <span class="user-name">邮箱</span>
+                        </th>
+                        <th>
+                            <span class="fk-user">
+                                <img src="../../../assets/icon/Customer.svg">
+                            </span>
+                            <span class="user-name">客户</span>
+                        </th>
+                        <th>
+                            <span class="fk-user">
+                                <img src="../../../assets/icon/friends.svg">
+                            </span>
+                            <span class="user-name">伙伴</span>
+                        </th>
+                        <th style="width:200px">
+                            <span class="user-name" >操作</span>
+                        </th>
+                    </tr>  
+                </thead>   
+            <tbody id="tcontent">       
+                <tr>
+                  <td>
+                    <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                   </td>
+                   <td>sharewis_test1</td>
+                   <td>伙伴</td>
+                   <td>喜士多</td>
+                   <td>伙伴</td>
+                   <td>英曼</td>
+                   <td>
+                    <span class="fk">
+                        <img src="../../../assets/icon/xiugai.svg">
+                    </span>
+                    <span class="fk">
+                        <img src="../../../assets/icon/shanchu.svg" />
+                    </span>
+                </td>                   
+
+                   <!-- <td>Column 5</td>
+                   <td>Column 6</td>
+                   <td>Column 7</td>
+                   <td>Column 8</td>
+                   <td>Column 8</td>   -->
+                </tr>
+                <tr>
+                  <td>
+                    <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                   </td>
+                   <td>sharewis_test1</td>
+                   <td>伙伴</td>
+                   <td>喜士多</td>
+                   <td>伙伴</td>
+                   <td>英曼</td>
+                   <td>
+                       <span class="fk">
+                           <img src="../../../assets/icon/xiugai.svg">
+                       </span>
+                       <span class="fk">
+                           <img src="../../../assets/icon/shanchu.svg" />
+                       </span>
+                   </td>
+                   <!-- <td>Column 5</td>
+                   <td>Column 6</td>
+                   <td>Column 7</td>
+                   <td>Column 8</td>
+                   <td>Column 8</td>   -->
+                </tr>
+                <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>   
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>                  
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr>
+                  <tr>
+                    <td>
+                        <img style="width:26px ;height:26px" src="../../../assets/icon/kuang.svg" />
+                     </td>
+                     <td>sharewis_test1</td>
+                     <td>伙伴</td>
+                     <td>喜士多</td>
+                     <td>伙伴</td>
+                     <td>英曼</td>
+                     <td>
+                        <span class="fk">
+                            <img src="../../../assets/icon/xiugai.svg">
+                        </span>
+                        <span class="fk">
+                            <img src="../../../assets/icon/shanchu.svg" />
+                        </span>
+                    </td>                     
+                     <!-- <td>Column 5</td>
+                     <td>Column 6</td>
+                     <td>Column 7</td>
+                     <td>Column 8</td>
+                     <td>Column 8</td>   -->
+                  </tr> 
+            </tbody>     
+        </table>
+    </div> 
+    <div class="page">
+        <!-- <nz-pagination [nzPageIndex]="3" [nzTotal]="500" nzShowSizeChanger [nzPageSize]="10"></nz-pagination> -->
+        <ul class="pagination">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">上一页</a></li>
+            <li><a href="#">1</a></li>
+            <li><a class="active" href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">下一页</a></li>
+            <li><a href="#">尾页</a></li>
+          </ul>
+          <span class="jump">跳转到：</span>
+          <input type="text"/>
+          <button>确定</button>
+    </div>   
+</div>

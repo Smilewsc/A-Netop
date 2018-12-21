@@ -1,0 +1,79 @@
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+.clear:after{
+    display:block;
+    clear:both;
+    content:"";
+}
+.msg-header{
+    text-align: left;
+}
+.base-msg{
+    margin-top:0;
+}
+.childmsg{
+    text-align: left;
+}
+.zbb{
+    width:900px;
+}
+.msg-content{
+    display: inline-block;
+    width: 281px;
+    height: 35px;
+    margin: 5px;
+}
+
+.msg-content label span{
+    display:inline-block;
+    margin-bottom: 10px;
+    width:70px;
+}
+.msg-content input{
+    border-radius: 3px;
+    outline: none;
+    border:1px solid #E8E8E8;
+    height:30px;
+    width:180px;
+}
+.sb-disc label span{
+    display:inline-block;
+    margin-bottom:5px;
+    
+}
+.lf-content .sb-content,.wx-content{
+    width: 80%;
+    height: 30px;
+    border: 1px solid #E8E8E8;
+    margin-top: -20px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    
+}
+.form-content label span{
+    display: inline-block;
+}
+.sb-img{
+    width: 100px;
+    height: 140px;
+    margin-top: -140px;
+    margin-right: -220px;
+}
+.btn{
+    margin-top:20px;
+    text-align: center;
+ }
+ .btn button{
+     margin-right:120px;
+     width:100px;
+     height:30px;
+ }
+ /* 上传图片 */
+ 
+[placeholder]{
+    padding-left:5px;
+}

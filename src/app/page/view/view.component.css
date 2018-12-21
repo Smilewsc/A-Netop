@@ -1,0 +1,37 @@
+ .chart {
+    height: 400px;
+    width:450px;
+    position: relative;
+    left: 90px;
+    top: -770px;
+    margin:0 18px;
+    display: inline-block;
+} 
+/* .table-container{
+    width:1420px;
+    position: relative;
+    left: 90px;
+    top: -770px;
+}
+.row .col{
+    border:1px solid #ddd;
+    width:450px;
+    margin:0 18px;
+    
+    }
+    .graph_title {
+    width: 100%;
+    background: #e0f4ff;
+    line-height: 40px;
+    float: left;
+    font-size: 14px;
+    color: #494b4d;
+    border: 1px solid #e0dede;
+    border-bottom: 0px;
+    }
+.chart{
+   
+}
+.graph_content{
+    width:98%;
+    } */

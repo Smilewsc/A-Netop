@@ -1,0 +1,23 @@
+{
+    "search":"Search",
+    "home":"Home",
+    "view":"View",
+    "report":"Report",
+    "site":"Site",
+    "equipment":"Equipment",
+    "cards":"Cards",
+    "business":"Business",
+    "work-order":"Work-order",
+    "inventory":"Inventory",
+    "AP":"AP",
+    "Call-repair":"Call-repair",
+    "maintenance":"Maintenance",
+    "change":"Change",
+
+    "basic-date":"Basic",
+    "system-management":"System",
+    "alarm-management":"Alarm",
+    "data-abouchement":"Data-Abouchement",
+    "parameter-setting":"Parameter",
+    "publish-management":"Publish"
+}

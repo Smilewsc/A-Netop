@@ -1,0 +1,17 @@
+.cby{
+    height:1000px; 
+    position: absolute; 
+    margin: 0 auto;
+    text-align:center; 
+}
+.tb{
+    position: relative;
+    width: 1420px;
+    top: -820px; 
+    margin-left:90px; 
+}
+.tb img{
+    width:20px;
+    height: 20px;
+    padding-right: 5px;
+}
